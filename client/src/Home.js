@@ -19,7 +19,7 @@ class Home extends Component {
         render() {
             return(
                 <div>
-                 <h1>Your are logged in</h1>
+                 <h1>Home page</h1>
                  <button onClick={this.logout}> Logout</button>
                 </div>
             )
