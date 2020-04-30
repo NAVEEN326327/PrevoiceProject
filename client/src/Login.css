@@ -1,0 +1,42 @@
+.container{
+    background-color: #f2f2f2;
+    
+}
+
+.container {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ width: 35rem;
+ height: auto;
+ margin-left: 40%;
+ margin-top: 1%;
+ border-radius: 2% 2%;
+ padding: 5%;
+
+}
+
+input{
+   border-style: none;  
+   height: 40px;
+   width: 400px;   
+   margin-right: 1rem;
+   padding-left: 1rem;
+   border-radius: 5px 5px;
+}
+
+.name{
+    margin-top: 1rem;
+}
+
+.size1{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-top: -50px;
+}
+
+
+
+.errormsg{
+    color: red;
+}

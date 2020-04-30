@@ -3,6 +3,8 @@ import './App.css';
 import fire from './config/fire';
 import Login from './Login';
 import Home from './Home';
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 class App extends Component {
 
