@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
 import fire from './config/fire';
-import Login from './Login';
+import SignUp from './SignUp';
 import Home from './Home';
+import Login from './Login';
 import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 
 
 class App extends Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       user: {}
@@ -20,12 +23,12 @@ class App extends Component {
   }
 
   authListener() {
-    fire.auth().onAuthStateChanged((user)=>{
-      if(user){
-        this.setState({user})
+    fire.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ user })
       }
-      else{
-        this.setState({user: null})
+      else {
+        this.setState({ user: null })
       }
     })
   }
@@ -33,7 +36,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      {this.state.user ? (<Home/>) : (<Login/>)}
+        <Router>
+          <div className="App">
+            <Switch>
+
+              <Route exact path="/" component={Login} />
+              <Route path="/SignUp" component={SignUp} />
+            </Switch>
+
+          </div>
+
+        </Router>
+
+        {/* {this.state.user ? (<Home/>) : (<Login/>)} */}
       </div>
     );
   }
