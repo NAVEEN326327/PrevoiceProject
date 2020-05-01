@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import fire from "./config/fire";
 import './SignUp.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { Link } from 'react-router-dom';
 
 
 class SignUp extends Component {
@@ -212,7 +212,7 @@ class SignUp extends Component {
                 })
 
                 this.setState({
-                    lastError: "Submitted!"
+                    lastError: "Created!"
                 })
 
 
@@ -372,10 +372,19 @@ class SignUp extends Component {
 
                         {/* <button onClick={this.login}>Login</button> */}
                         <input type="submit" value="Submit" className="btn btn-primary" />
+
+            
                     </div>
                     <span className="msg1" >{this.state.lastError}</span>
 
                 </form>
+
+                <div className="form-group">
+                <Link to ="/">
+                        <input type="submit" value="SignIn" className="btn btn-success" />
+
+                        </Link>
+                </div>
             </div>
         )
     }

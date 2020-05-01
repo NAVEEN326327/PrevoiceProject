@@ -119,8 +119,8 @@ class Login extends Component {
         return (
             <div className="container">
                 {console.log(this.state.users)}
-                <div className="form-group size1">SignUp</div>
-                <form className="form" onSubmit={this.signup}>
+                <div className="form-group size1">SignIn</div>
+                <form className="form" onSubmit={this.login}>
                     <div className="form-group">
 
                         <input
@@ -164,7 +164,8 @@ class Login extends Component {
                 
                 <div className="form-group">
                 <Link to="/signUp">
-                <button  className="btn btn-primary">Register</button>
+                <input type="submit" value="Register" className="btn btn-success" />
+
 
                 </Link>
 
