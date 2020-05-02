@@ -35,7 +35,7 @@ function Video1() {
   const socket = useRef();
 
   useEffect(() => {
-    socket.current = io.connect("http://localhost:8000/");
+    socket.current = io.connect("https://majorprojectapi.herokuapp.com/");
     navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(stream => {
       setStream(stream);
       if (userVideo.current) {
