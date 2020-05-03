@@ -36,7 +36,7 @@ class Navbar extends Component {
 
                 <div>
                     <Link to="/dashboard">
-                        <button className="btn btn-dark"> Dashboard</button>
+                        <button className="btn btn-dark"> Profile</button>
                     </Link>
                 </div>
 

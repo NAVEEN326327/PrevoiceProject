@@ -1,11 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
-import './App.css';
+import './Video.css';
 import io from "socket.io-client";
 import Peer from "simple-peer";
 import styled from "styled-components";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 const Container = styled.div`
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -13,12 +15,14 @@ const Container = styled.div`
 
 const Row = styled.div`
   display: flex;
-  width: 100%;
+  // width: 100%;
 `;
 
 const Video = styled.video`
   width: 50%;
-  height: 50%;
+  height: 100%;
+  margin-left:1%;
+  margin-right:1%;
 `;
 
 function Video1() {
@@ -116,31 +120,42 @@ function Video1() {
   let incomingCall;
   if (receivingCall) {
     incomingCall = (
-      <div>
-        <h1>{caller} is calling you</h1>
-        <button onClick={acceptCall}>Accept</button>
+      <div className="cont">
+        <h4>{caller} is <bold>calling you.....  </bold></h4>
+        <button className="btn btn-dark" onClick={acceptCall}>Accept</button>
       </div>
     )
   }
   return (
     <Container>
-      <Row>
-        {UserVideo}
+      <Row >
+        <div className="first">
+          <Row className="left-screen">
+          {UserVideo}
+
+          </Row>
+          <Row >
+            {incomingCall}
+          </Row>
+        </div>
         {PartnerVideo}
       </Row>
-      <Row>
+
+
+
+      <Row className="cont">
+        <h1>Active Users</h1>
+
         {Object.keys(users).map(key => {
           if (key === yourID) {
             return null;
           }
           return (
-            <button onClick={() => callPeer(key)}>Call {key}</button>
+            <button className=" btn btn-success bt" onClick={() => callPeer(key)}>Call {key}</button>
           );
         })}
       </Row>
-      <Row>
-        {incomingCall}
-      </Row>
+
     </Container>
   );
 }

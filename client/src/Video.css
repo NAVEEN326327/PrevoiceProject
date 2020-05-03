@@ -1,4 +1,4 @@
-.container {
+/* .container {
     height: 100vh;
     width: 100%;
     display: flex;
@@ -14,5 +14,47 @@
     border: 1px solid blue;
     width: 50%;
     height: 50%;
-}
+} */
 
+
+
+/*  Video css */
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    width: 30%;
+    margin: 5%;
+    padding: 2%;
+    justify-content: space-evenly;
+
+  }
+
+  .bt{
+    border-bottom: 1px solid black;
+    margin-bottom: 1%;
+  }
+
+  .reci{
+    width: 30%;
+    margin: 5%;
+    padding: 2%;
+
+  }
+  
+  .first{
+      display: flex;
+      flex-direction: column;
+
+  }
+
+  h4{
+      font-size: 0.7rem;
+  }
+
+  .left-screen{
+      padding-left: 10%;
+  }
+  
+  /*  */
