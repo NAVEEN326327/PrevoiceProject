@@ -9,20 +9,50 @@ class Dashboard extends Component {
 
     constructor(props){
         super(props);
+
+        this.state ={
+            users: [], 
+            id: ""
+
+
+
+        }
        
     }
 
-    logout() {
-        fire.auth().signOut();
+    componentDidMount() {
+        fire
+            .database()
+            .ref('user')
+            .once('value')
+            .then(snapShot => {
+                snapShot.forEach(u => {
+                    // this.state.users.push(u.val())  
+
+                    // this.state.users.push({id: u.key, name: u.val().name, email:u.val().email, phone:u.val().phone, age:u.val().age, country:u.val().country})
+                    this.state.users.push({
+                        id: u.key,
+                        ...u.val()
+                    })
+
+                    // console.log(u.key)
+                })
+            });
     }
+
+  
         render() {
             return(
                 <div>
-                 <h1>Dashboard here</h1>
-              
-                </div>
+
+{this.state.users.map((item,i)=> {
+    console.log('test');
+})}
+sadfkls
+</div>
+            
             )
-        }
+}
 }
 
 

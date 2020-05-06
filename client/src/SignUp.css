@@ -1,5 +1,6 @@
+
+
 .container{
-    background-color: #f2f2f2;
     
 }
 
@@ -7,12 +8,15 @@
  display: flex;
  flex-direction: column;
  justify-content: space-evenly;
- width: 35rem;
+ width: 50%;
  height: auto;
- margin-left: 20%;
+ margin-left: 25%;
  margin-top: 1%;
- border-radius: 2% 2%;
+ border-radius: 5% 5% 5% 5%;
  padding: 5%;
+    box-shadow: 10px 10px 20px  ;
+  
+ margin-bottom: 10rem;
 
 }
 
@@ -23,6 +27,7 @@ input{
    margin-right: 1rem;
    padding-left: 1rem;
    border-radius: 5px 5px;
+   border-bottom: 1px solid black;
 }
 
 .name{
@@ -33,10 +38,17 @@ input{
     font-size: 3rem;
     font-weight: 900;
     margin-top: -50px;
+    color: purple;
 }
 
 
 
 .errormsg{
     color: red;
+}
+
+.image1{
+    margin-bottom: 1rem;
+    
+ 
 }
