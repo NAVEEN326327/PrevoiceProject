@@ -122,7 +122,7 @@ function Video1() {
     incomingCall = (
       <div className="cont">
         <h4>{caller} is <bold>calling you.....  </bold></h4>
-        <button className="btn btn-dark" onClick={acceptCall}>Accept</button>
+        <button className="btn btn-dark" onClick={acceptCall}>Accept/Decline</button>
       </div>
     )
   }
@@ -159,5 +159,7 @@ function Video1() {
     </Container>
   );
 }
+
+
 
 export default Video1;

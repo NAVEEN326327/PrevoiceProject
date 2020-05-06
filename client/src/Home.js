@@ -1,7 +1,7 @@
 
 import React, { Component } from "react";
 import fire from "./config/fire";
-import Video1 from './Video';
+import VideoPlay from './Video';
 
 
 class Home extends Component {
@@ -20,7 +20,7 @@ class Home extends Component {
             return(
                 <div>
                  <h1></h1>
-                 <Video1/>
+                 <VideoPlay/>
                  {/* <button onClick={this.logout}> Logout</button> */}
                 </div>
             )

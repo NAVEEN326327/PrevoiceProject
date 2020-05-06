@@ -108,9 +108,9 @@ class Login extends Component {
         e.preventDefault();
         fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
             .then((u) => {
-                console.log(u);
+                alert("Welcome back! ");
             }).catch((err) => {
-                console.log(err);
+                alert("Wrong Email or password ");
             })
     }
 
@@ -118,8 +118,13 @@ class Login extends Component {
     render() {
         return (
             <div className="container">
+                    
                 {console.log(this.state.users)}
-                <div className="form-group size1">SignIn</div>
+                <div className="form-group size1">Sign In</div>
+                <div className="image1">
+                <img src="https://t3.ftcdn.net/jpg/03/21/17/16/240_F_321171650_yAKDUlGyVriXRFVgrMB023RtNn16ZzvN.jpg" alt="log" />
+
+                </div>
                 <form className="form" onSubmit={this.login}>
                     <div className="form-group">
 
@@ -136,7 +141,7 @@ class Login extends Component {
 
 
                     </div>
-                    <span className="msg" >{this.state.emailError}</span>
+                    {/* <span className="msg" >{this.state.emailError}</span> */}
 
                     <div className="form-group">
 
@@ -153,7 +158,7 @@ class Login extends Component {
 
 
                     </div>
-                    <span className="msg" >{this.state.passwordError}</span>
+                    {/* <span className="msg" >{this.state.passwordError}</span> */}
 
                     <div className="form-group">
                         <input type="submit" value="Login" className="btn btn-primary " />
@@ -165,11 +170,13 @@ class Login extends Component {
                 <div className="form-group">
                 <Link to="/signUp">
                 <input type="submit" value="Register" className="btn btn-success" />
-
-
                 </Link>
+                <div>
+                <span className="msg" >New User!</span>
 
                 </div>
+                </div>
+          
             </div>
         )
     }

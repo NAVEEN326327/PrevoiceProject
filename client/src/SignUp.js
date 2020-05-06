@@ -31,6 +31,17 @@ class SignUp extends Component {
             phone: "91",
             age: "",
             country: "",
+            
+
+            date: new Date(), 
+            friends: 0,
+            image: '',
+            level: 1,
+            minutes: 0,
+            time: '',
+            talk: 0,
+            uid: '',
+
             phoneError: "",
             emailError: "",
             passwordError: "",
@@ -206,9 +217,9 @@ class SignUp extends Component {
              
             fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
                 .then((u) => {
-                    console.log(u)
+                    alert("User Created")
                 }).catch((err) => {
-                    console.log(err);
+                    alert(err);
                 })
 
                 this.setState({
@@ -225,14 +236,25 @@ class SignUp extends Component {
                     email: this.state.email,
                     age: this.state.age,
                     phone: this.state.phone,
-                    country: this.state.country
+                    profession: this.state.country,
+                    date: new Date(), 
+                    friends: this.state.friends,
+                    image: this.state.image,
+                    level: this.state.level,
+                    minutes: this.state.minutes,
+                    time: this.state.time,
+                    talk: this.state.talk,
+                    uid: this.state.uid
                     // add time schema too for tracking user calling time
 
 
                 });
 
 
+
         }
+
+        // window.location = '/signup';
     }
 
     // deleteData(){
@@ -356,11 +378,11 @@ class SignUp extends Component {
 
 
                         <input
-                            type="country"
+                            type="text"
                             id="country"
                             // name="password"
                             onChange={this.changeContry}
-                            placeholder="country"
+                            placeholder="Profession"
                             value={this.state.country}
                             required
 
