@@ -4,8 +4,8 @@ import fire from "./config/fire";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-
-
+import NavHomeButtonAnimation from './navhomebutton';
+import NavCallButtonAnimation from './navCallButtonanimation';
 
 
 class Navbar extends Component {
@@ -31,7 +31,7 @@ class Navbar extends Component {
 
                 <div>
                     <Link to="/start">
-                        <button className="btn btn-dark"> Start</button>
+                       <NavCallButtonAnimation className="btn btn-dark"/> <h3>Start </h3>
                     </Link>
                 </div>
 
@@ -43,7 +43,8 @@ class Navbar extends Component {
 
                 <div>
                     <Link to="/">
-                        <button className="btn btn-dark"> Home</button>
+                    <button className="btn btn-dark "> Home</button>
+                        
                     </Link>
                 </div>
 

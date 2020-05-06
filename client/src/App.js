@@ -12,6 +12,7 @@ import Navbar from './Navbar';
 import Start from './Start';
 
 
+
 class App extends Component {
 
   constructor(props) {
@@ -45,7 +46,7 @@ class App extends Component {
         {this.state.user ? 
         // (<Home/>) :
         (<Router>
-                <div className="">
+                <div className="nav1">
                   <Navbar/>
                   <Switch>
                     <Route exact path="/" component={Home} />

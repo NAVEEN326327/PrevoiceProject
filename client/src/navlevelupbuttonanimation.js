@@ -1,7 +1,7 @@
 import React from 'react';
 // import Home from './Home';
 import Lottie from 'react-lottie';
-import * as homeanimation from './jsonFiles/homeanimation1.json';
+import * as homeanimation from './jsonFiles/levelupbuttonanimation.json';
 
 
 const defaultOptions = {
@@ -13,12 +13,12 @@ const defaultOptions = {
     }
 };
 
-const HomeAnimation = () => {
+const LevelUpButtonAnimation = () => {
     return (
         <div>
-<Lottie options={defaultOptions} height={700} width={700} />
+<Lottie options={defaultOptions} height={100} width={120} />
         </div>
     )
 }
 
-export default HomeAnimation;
+export default LevelUpButtonAnimation;
