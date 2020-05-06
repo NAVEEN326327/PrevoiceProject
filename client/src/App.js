@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Dashboard from './Dashboard';
 import Level from './Level';
 import Navbar from './Navbar';
+import Start from './Start';
 
 
 class App extends Component {
@@ -50,7 +51,7 @@ class App extends Component {
                     <Route exact path="/" component={Home} />
                     <Route path="/dashboard" component={Dashboard} />
                     <Route path="/level" component={Level} />
-
+                    <Route path="/start" component= {Start} />
                   </Switch>
                 </div>
         </Router>) :

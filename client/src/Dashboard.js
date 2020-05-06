@@ -48,8 +48,7 @@ class Dashboard extends Component {
 {this.state.users.map((item,i)=> {
     console.log('test');
 })}
-sadfkls
-</div>
+Profile page</div>
             
             )
 }

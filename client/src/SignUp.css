@@ -1,8 +1,6 @@
 
 
-.container{
-    
-}
+
 
 .container {
  display: flex;
@@ -18,6 +16,12 @@
   
  margin-bottom: 10rem;
 
+}
+
+.signupform{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 input{
@@ -52,3 +56,8 @@ input{
     
  
 }
+
+.signupImage{
+  size: 10%;
+}
+

@@ -27,16 +27,23 @@ class Navbar extends Component {
         return (
             <div className="nav1">
 
+
+
                 <div>
-                    <Link to="/">
-                        <button className="btn btn-dark"> Home</button>
+                    <Link to="/start">
+                        <button className="btn btn-dark"> Start</button>
                     </Link>
                 </div>
-              
 
                 <div>
                     <Link to="/dashboard">
                         <button className="btn btn-dark"> Profile</button>
+                    </Link>
+                </div>
+
+                <div>
+                    <Link to="/">
+                        <button className="btn btn-dark"> Home</button>
                     </Link>
                 </div>
 

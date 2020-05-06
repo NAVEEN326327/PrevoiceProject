@@ -3,6 +3,7 @@ import fire from "./config/fire";
 import './SignUp.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from 'react-router-dom';
+import LoginAnimation from './LoginAnimation';
 
 
 class SignUp extends Component {
@@ -31,9 +32,9 @@ class SignUp extends Component {
             phone: "91",
             age: "",
             country: "",
-            
 
-            date: new Date(), 
+
+            date: new Date(),
             friends: 0,
             image: '',
             level: 1,
@@ -45,9 +46,9 @@ class SignUp extends Component {
             phoneError: "",
             emailError: "",
             passwordError: "",
-            confirmPasswordError:"",
+            confirmPasswordError: "",
             phoneError: "",
-            lastError:""
+            lastError: ""
 
         }
     }
@@ -214,7 +215,7 @@ class SignUp extends Component {
 
         if (this.validEmail() == 1) {
 
-             
+
             fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
                 .then((u) => {
                     alert("User Created")
@@ -222,9 +223,9 @@ class SignUp extends Component {
                     alert(err);
                 })
 
-                this.setState({
-                    lastError: "Created!"
-                })
+            this.setState({
+                lastError: "Created!"
+            })
 
 
 
@@ -237,7 +238,7 @@ class SignUp extends Component {
                     age: this.state.age,
                     phone: this.state.phone,
                     profession: this.state.country,
-                    date: new Date(), 
+                    date: new Date(),
                     friends: this.state.friends,
                     image: this.state.image,
                     level: this.state.level,
@@ -273,76 +274,87 @@ class SignUp extends Component {
 
     render() {
         return (
+
             <div className="container">
+                {/* <div className="signupImage">
+                    <img src="https://tnav4.ftcdn.net/jpg/01/26/63/11/240_F_126631173_W9Nq8ZA5s0R0M3ZIBx3BMytVIFseGa9c.jpg" alt=" "></img>
+                </div> */}
+
                 {console.log(this.state.users)}
-                <div className="form-group size1">SignUp</div>
-                <form className="form" onSubmit={this.signup}>
-                    <div className="form-group">
+                <div className="form-group size1">Sign Up</div>
+                <LoginAnimation />
 
-                        <input
-                            type="email"
-                            id="email"
-                            // name="email"
-                            placeholder="email"
-                            onChange={this.changeEmail}
-                            value={this.state.email}
+                <form className="signupform" onSubmit={this.signup}>
+                    <div className="left">
+                        <div className="form-group">
 
-                            required
-                        />
+                            <input
+                                type="email"
+                                id="email"
+                                // name="email"
+                                placeholder="email"
+                                onChange={this.changeEmail}
+                                value={this.state.email}
+
+                                required
+                            />
 
 
+                        </div>
+                        <span className="msg" >{this.state.emailError}</span>
+
+                        <div className="form-group">
+
+                            <input
+                                type="password"
+                                id="password"
+                                // name="password"
+                                onChange={this.changePwd}
+                                placeholder="Password"
+                                value={this.state.password}
+                                required
+
+                            />
+
+
+                        </div>
+                        <span className="msg" >{this.state.passwordError}</span>
+
+                        <div className="form-group">
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                // name="password"
+                                onChange={this.changeConfirmPassword}
+                                placeholder="Confirm password"
+                                value={this.state.confirmPassword}
+                                required
+
+                            />
+                            {/* <span className="msg" >{this.state.passwordError}</span> */}
+                        </div>
+                        <span className="msg" >{this.state.confirmPasswordError}</span>
+
+                        <div className="form-group">
+
+
+
+                            <input
+                                type="text"
+                                id="name"
+                                className="name"
+                                // name="email"
+                                placeholder="name"
+                                onChange={this.changeName}
+                                value={this.state.name}
+                                required
+
+                            />
+                        </div>
                     </div>
-                    <span className="msg" >{this.state.emailError}</span>
-
-                    <div className="form-group">
-
-                        <input
-                            type="password"
-                            id="password"
-                            // name="password"
-                            onChange={this.changePwd}
-                            placeholder="Password"
-                            value={this.state.password}
-                            required
-
-                        />
-
-
-                    </div>
-                    <span className="msg" >{this.state.passwordError}</span>
-
-                    <div className="form-group">
-
-                        <input
-                            type="password"
-                            id="confirmPassword"
-                            // name="password"
-                            onChange={this.changeConfirmPassword}
-                            placeholder="Confirm password"
-                            value={this.state.confirmPassword}
-                            required
-
-                        />
-                        {/* <span className="msg" >{this.state.passwordError}</span> */}
-                    </div>
-                    <span className="msg" >{this.state.confirmPasswordError}</span>
-
-                    <div className="form-group">
-
-
-
-                        <input
-                            type="text"
-                            id="name"
-                            className="name"
-                            // name="email"
-                            placeholder="name"
-                            onChange={this.changeName}
-                            value={this.state.name}
-                            required
-
-                        />
-                    </div>
+                   <div className="right">
+                        
 
                     <div className="form-group">
 
@@ -395,17 +407,23 @@ class SignUp extends Component {
                         {/* <button onClick={this.login}>Login</button> */}
                         <input type="submit" value="Submit" className="btn btn-primary" />
 
-            
+
                     </div>
                     <span className="msg1" >{this.state.lastError}</span>
+                    </div>
 
                 </form>
 
                 <div className="form-group">
-                <Link to ="/">
+                    <Link to="/">
                         <input type="submit" value="SignIn" className="btn btn-success" />
+                   
+                    </Link>
+                    <div>
+                    <span className="msg1"  >If already Registered!!</span>
 
-                        </Link>
+                    </div>
+
                 </div>
             </div>
         )

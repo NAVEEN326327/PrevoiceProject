@@ -1,8 +1,7 @@
 
 import React, { Component } from "react";
 import fire from "./config/fire";
-import VideoPlay from './Video';
-
+// import MyAnimation from './HomeAnimation';
 
 class Home extends Component {
 
@@ -19,9 +18,13 @@ class Home extends Component {
         render() {
             return(
                 <div>
-                 <h1></h1>
-                 <VideoPlay/>
+                 <h1>
+                 Home 
+
+                 </h1>
                  {/* <button onClick={this.logout}> Logout</button> */}
+                 {/* <lottie-player src="https://assets9.lottiefiles.com/datafiles/MUp3wlMDGtoK5FK/data.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop controls autoplay></lottie-player> */}
+                 {/* <MyAnimation/> */}
                 </div>
             )
         }
@@ -29,3 +32,4 @@ class Home extends Component {
 
 
 export default Home;
+

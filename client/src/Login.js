@@ -3,7 +3,7 @@ import fire from "./config/fire";
 import './SignUp.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from 'react-router-dom';
-
+import LoginAnimation from "./LoginAnimation";
 
 
 class Login extends Component {
@@ -121,10 +121,12 @@ class Login extends Component {
                     
                 {console.log(this.state.users)}
                 <div className="form-group size1">Sign In</div>
-                <div className="image1">
+                {/* <div className="image1">
                 <img src="https://t3.ftcdn.net/jpg/03/21/17/16/240_F_321171650_yAKDUlGyVriXRFVgrMB023RtNn16ZzvN.jpg" alt="log" />
 
-                </div>
+                </div> */}
+                <LoginAnimation />
+
                 <form className="form" onSubmit={this.login}>
                     <div className="form-group">
 
