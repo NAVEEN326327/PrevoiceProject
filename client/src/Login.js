@@ -126,7 +126,7 @@ class Login extends Component {
 
                 </div> */}
                 <LoginAnimation />
-nav
+
                 <form className="form" onSubmit={this.login}>
                     <div className="form-group">
 

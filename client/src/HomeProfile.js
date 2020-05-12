@@ -11,6 +11,9 @@ class HomeProfile extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            currentUser: props.thisuser,
+            email: props.thisCurrentUserEmail
+               
 
         }
 
@@ -23,24 +26,24 @@ class HomeProfile extends Component {
             <div className="card">
 
                 <div className="card-img-container">
-                    <img src={this.props.thisuser.dp} alt="pic"></img>
+                    <img src={this.state.currentUser.dp} alt="pic"></img>
 
                 </div>
 
                 <div>
-                    <p>  Name: &nbsp;    {this.props.thisuser.name} </p>
+                    <p>  Name: &nbsp;    {this.state.currentUser.name} </p>
                  
-                    <p>  Profession: &nbsp;    {this.props.thisuser.profession} </p>
+                    <p>  Profession: &nbsp;    {this.state.currentUser.profession} </p>
                     
-                    <p> Age: &nbsp;    {this.props.thisuser.age} </p>
+                    <p> Age: &nbsp;    {this.state.currentUser.age} </p>
                     
-                    <p> Level: &nbsp; {this.props.thisuser.level} </p>
+                    <p> Level: &nbsp; {this.state.currentUser.level} </p>
                     
-                    <p>  Minutes: &nbsp;  {this.props.thisuser.minutes} </p> 
+                    <p>  Minutes: &nbsp;  {this.state.currentUser.minutes} </p> 
 
-                    <p> Friends: &nbsp; {this.props.thisuser.friends}</p>
+                    <p> Friends: &nbsp; {this.state.currentUser.friends}</p>
 
-                    <p> Email: &nbsp; {this.props.thisCurrentUserEmail}</p>
+                    <p> Email: &nbsp; {this.state.email}</p>
  
                 </div>
 

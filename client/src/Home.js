@@ -113,7 +113,7 @@ class Home extends Component {
             <div className="homeContainer" >
                 {/* {console.log(this.state.currentUser.email)} */}
                 <div className="homeContainer-left">
-                    {/* {this.state.currentUserEmail} {this.state.currentUserEmail}
+                     {/* { if (this.state.currentUserEmail) }
                     {
                         this.state.users &&
                         this.state.user.map(u => {
@@ -129,8 +129,8 @@ class Home extends Component {
                                 </div>
                             )
                         })
-                    }
-                    {
+                    } */}
+                    {/* {
                         this.state.users &&
                         this.state.user.map(u => {
                             return (
@@ -148,7 +148,7 @@ class Home extends Component {
                     } */}
                     {/* {console.log(this.state.users)} */}
 
-                    <HomeProfile thisuser={this.state.currentUser} thisCurrentUserEmail={this.state.currentUserEmail} />
+                    <HomeProfile thisuser={this.state.currentUser}  />
                     <HomeOfferCard />
                 
                 </div>
@@ -161,7 +161,7 @@ class Home extends Component {
 
                 </div>
                 <div className="homeContainer-right">
-                {/* <HomeProfile thisuser={this.state.currentUser} thisCurrentUserEmail={this.state.currentUserEmail} /> */}
+                <HomeProfile thisuser={this.state.currentUser} thisCurrentUserEmail={this.state.currentUserEmail} />
 
 
                 </div>
