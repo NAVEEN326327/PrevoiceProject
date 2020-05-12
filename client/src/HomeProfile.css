@@ -1,0 +1,28 @@
+.card{
+    display: flex;
+    flex-direction: column;
+  text-align: left;
+  box-shadow: 5px 10px 10px #888888;
+  margin-bottom: 8%;
+}
+
+
+.card-img-container{
+  text-align: center;
+  
+
+}
+
+img{
+    width: 260px;
+     height: 260px;
+     padding: 2%;
+     border-radius: 4%;
+
+    /* border-radius: 50%; */
+}
+
+p{
+    padding-left: 4%;
+    margin-bottom: -0.1rem;
+}

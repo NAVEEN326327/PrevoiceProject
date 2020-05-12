@@ -1,0 +1,29 @@
+.video{
+    width: 60px;
+    height: 60px;
+}
+
+h1, h2, h3, h4 {
+    padding-left: 4%;
+
+}
+
+h3 {
+    font-weight: bolder;
+    font-size: 1.5rem;
+    border-bottom: 1px solid gray ;
+}
+
+.card-component{
+    display: flex;
+    flex-direction: row;
+}
+
+p{
+    font-weight: 500;
+    align-items: center;
+}
+
+ li{
+    font-size: 400;
+}

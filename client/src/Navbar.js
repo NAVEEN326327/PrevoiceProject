@@ -28,10 +28,9 @@ class Navbar extends Component {
             <div className="nav1">
 
 
-
                 <div>
                     <Link to="/start">
-                       <NavCallButtonAnimation className="btn btn-dark"/> <h3>Start </h3>
+                       <NavCallButtonAnimation className="btn btn-dark"/>
                     </Link>
                 </div>
 

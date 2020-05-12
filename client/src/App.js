@@ -18,7 +18,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: {}
+      user: {},
+      
     }
   }
 
@@ -39,17 +40,18 @@ class App extends Component {
   }
 
   render() {
+    // {console.log(this.state.user.email)}
+
     return (
       <div className="App">
-        {/* {console.log(this.state.user)} */}
         
         {this.state.user ? 
         // (<Home/>) :
         (<Router>
-                <div className="nav1">
+                <div className="">
                   <Navbar/>
                   <Switch>
-                    <Route exact path="/" component={Home} />
+                    <Route exact path="/" component={Home}/>
                     <Route path="/dashboard" component={Dashboard} />
                     <Route path="/level" component={Level} />
                     <Route path="/start" component= {Start} />

@@ -1,12 +1,8 @@
-.nav1{
+.homeContainer{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-  text-align: center;
-  margin-top: 1%;
-
+    margin-top: 2%;
 }
 
-button{
-    border-style: none;
-}
+/* .homeContainer  */

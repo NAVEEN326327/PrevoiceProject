@@ -16,7 +16,7 @@ const defaultOptions = {
 const HomeAnimation = () => {
     return (
         <div>
-<Lottie options={defaultOptions} height={700} width={700} />
+<Lottie options={defaultOptions}  width={400} />
         </div>
     )
 }
