@@ -54,3 +54,16 @@ class HomeProfile extends Component {
 
 
 export default HomeProfile;
+
+
+
+
+
+
+// fetch('http://newsapi.org/v2/everything?domains=wsj.com&apiKey=af76663bce144bbab429cfbe46c3add9')
+// .then(function(res) {
+//     return res.json();
+// })
+// .then(function(myJson) {
+//     console.log(JSON.stringify(myJson));
+// });
